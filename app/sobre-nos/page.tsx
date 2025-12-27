@@ -19,16 +19,7 @@ export default function SobreNosPage() {
       <main className="flex-1">
         {/* Hero Section */}
         <section className="w-full">
-          <div className="max-w-[1280px] mx-auto px-4 sm:px-10 py-2 lg:py-2">
-            <Link
-              href="/"
-              className="inline-flex items-center gap-2 text-white hover:text-primary transition-colors mb-6 text-sm font-medium z-10 relative"
-            >
-              <span className="material-symbols-outlined text-lg">
-                arrow_back
-              </span>
-              Voltar para a página inicial
-            </Link>
+          <div className="max-w-[1280px] py-6 mx-auto px-4 sm:px-10">
             <div className="@container">
               <div
                 className="flex min-h-[560px] flex-col gap-6 bg-cover bg-center bg-no-repeat rounded-xl items-start justify-end px-6 pb-12 sm:px-12 sm:pb-16 shadow-lg overflow-hidden relative group"

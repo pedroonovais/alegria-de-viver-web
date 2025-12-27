@@ -56,7 +56,7 @@ export default function Footer() {
           </div>
 
           {/* Links Column - Institucional */}
-          <div className="flex flex-col gap-4 mx-auto">
+          <div className="flex flex-col gap-4 md:mx-auto lg:mx-auto">
             <h4 className="text-white font-bold text-lg">Institucional</h4>
             <ul className="flex flex-col gap-2 text-sm">
               {institutionalLinks.map((link, index) => (
@@ -91,7 +91,7 @@ export default function Footer() {
           */}
 
           {/* Contact Column */}
-          <div className="flex flex-col gap-4 mx-auto">
+          <div className="flex flex-col gap-4 md:mx-auto lg:mx-auto">
             <h4 className="text-white font-bold text-lg">Contato</h4>
             <ul className="flex flex-col gap-3 text-sm">
               {/* Address *

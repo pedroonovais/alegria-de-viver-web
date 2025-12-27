@@ -103,6 +103,7 @@ export default function Header() {
               >
                 Sobre Nós
               </a>
+              {/*
               <a
                 className="text-text-main text-sm font-medium leading-normal hover:text-primary transition-colors"
                 href="#"
@@ -110,6 +111,7 @@ export default function Header() {
               >
                 Projetos
               </a>
+              */}
               <a
                 className="text-text-main text-sm font-medium leading-normal hover:text-primary transition-colors"
                 href="/contato"
@@ -117,6 +119,7 @@ export default function Header() {
               >
                 Contato
               </a>
+              {/*
               <button
                 className="flex w-full items-center justify-center rounded-lg h-10 px-6 bg-primary hover:bg-primary-dark transition-colors text-white text-sm font-bold leading-normal tracking-[0.015em] shadow-sm mt-2"
                 onClick={() => {
@@ -126,6 +129,7 @@ export default function Header() {
               >
                 Como Doar
               </button>
+              */}
             </nav>
           </div>
         )}
