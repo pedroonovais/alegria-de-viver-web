@@ -19,47 +19,56 @@ export default function Header() {
       <div className="max-w-[1280px] mx-auto px-4 sm:px-10 py-3">
         <div className="flex items-center justify-between whitespace-nowrap">
           {/* Logo */}
-          <div className="flex items-center gap-3 text-text-main">
-            <Image src="/logo.png" alt="Alegria de Viver" width={48} height={48} />
-            <h2 className="text-text-main text-lg font-bold leading-tight tracking-[-0.015em]">
-              Alegria de Viver
-            </h2>
-          </div>
+          <a
+              className="text-text-main text-sm font-medium leading-normal hover:text-primary transition-colors"
+              href="/"
+            >
+            <div className="flex items-center gap-3 text-text-main">
+              <Image src="/logo.png" alt="Alegria de Viver" width={48} height={48} />
+              <h2 className="text-text-main text-lg font-bold leading-tight tracking-[-0.015em]">
+                Alegria de Viver
+              </h2>
+            </div>
+          </a>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex flex-1 justify-end gap-8 items-center">
             <nav className="flex items-center gap-8">
               <a
                 className="text-text-main text-sm font-medium leading-normal hover:text-primary transition-colors"
-                href="#"
+                href="/"
               >
                 Início
               </a>
               <a
                 className="text-text-main text-sm font-medium leading-normal hover:text-primary transition-colors"
-                href="#"
+                href="/sobre-nos"
               >
                 Sobre Nós
               </a>
+              {/*
               <a
                 className="text-text-main text-sm font-medium leading-normal hover:text-primary transition-colors"
                 href="#"
               >
                 Projetos
               </a>
+              */}
               <a
                 className="text-text-main text-sm font-medium leading-normal hover:text-primary transition-colors"
-                href="#"
+                href="/contato"
               >
                 Contato
               </a>
             </nav>
+            {/*
             <button
               className="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-6 bg-primary hover:bg-primary-dark transition-colors text-white text-sm font-bold leading-normal tracking-[0.015em] shadow-sm"
               onClick={() => console.log("Botão Como Doar clicado")}
             >
               <span className="truncate">Como Doar</span>
             </button>
+            */}
           </div>
 
           {/* Mobile Menu Icon */}
@@ -89,7 +98,7 @@ export default function Header() {
               </a>
               <a
                 className="text-text-main text-sm font-medium leading-normal hover:text-primary transition-colors"
-                href="#"
+                href="/sobre-nos"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Sobre Nós
@@ -103,7 +112,7 @@ export default function Header() {
               </a>
               <a
                 className="text-text-main text-sm font-medium leading-normal hover:text-primary transition-colors"
-                href="#"
+                href="/contato"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Contato

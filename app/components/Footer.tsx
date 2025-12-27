@@ -7,8 +7,8 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   const institutionalLinks = [
-    { label: "Sobre Nós", href: "#" },
-    { label: "Nossa História", href: "#" },
+    { label: "Sobre Nós", href: "/sobre-nos" },
+    { label: "Nossa História", href: "/sobre-nos#historia" },
     { label: "Transparência", href: "#" },
     //{ label: "Diretoria", href: "#" },
   ];

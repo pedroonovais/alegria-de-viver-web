@@ -27,6 +27,7 @@ export default function CTASection() {
           Não importa o valor, cada doação contribui diretamente para manter
           nossos projetos vivos e levar esperança para quem mais precisa.
         </p>
+        {/*
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <button
             className="bg-white text-primary hover:bg-gray-100 font-bold py-3 px-8 rounded-lg shadow-lg transition-colors text-lg"
@@ -41,6 +42,7 @@ export default function CTASection() {
             Seja um Voluntário
           </button>
         </div>
+        */}
       </div>
     </section>
   );

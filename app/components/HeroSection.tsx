@@ -1,5 +1,7 @@
 "use client";
 
+import Link from "next/link";
+
 /**
  * Componente da seção hero (banner principal)
  */
@@ -7,11 +9,6 @@ export default function HeroSection() {
   const handleDonationClick = () => {
     console.log("Botão Faça uma Doação clicado");
     // TODO: Implementar navegação para página de doação
-  };
-
-  const handleHistoryClick = () => {
-    console.log("Botão Conheça Nossa História clicado");
-    // TODO: Implementar navegação para página sobre nós
   };
 
   return (
@@ -41,18 +38,20 @@ export default function HeroSection() {
               </h2>
             </div>
             <div className="relative z-10 flex flex-wrap gap-4 mt-2">
+              {/*
               <button
                 className="flex items-center justify-center rounded-lg h-12 px-8 bg-primary hover:bg-primary-dark transition-colors text-white text-base font-bold shadow-lg"
                 onClick={handleDonationClick}
               >
                 <span className="truncate">Faça uma Doação</span>
               </button>
-              <button
-                className="flex items-center justify-center rounded-lg h-12 px-8 bg-white/90 hover:bg-white transition-colors text-text-main text-base font-bold shadow-lg backdrop-blur-sm"
-                onClick={handleHistoryClick}
+              */}
+              <Link
+                href="/sobre-nos"
+                className="flex items-center justify-center rounded-lg h-12 px-8 bg-primary hover:bg-primary-dark transition-colors text-white text-base font-bold shadow-lg"
               >
                 <span className="truncate">Conheça Nossa História</span>
-              </button>
+              </Link>
             </div>
           </div>
         </div>

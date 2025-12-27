@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 
 /**
  * Componente da seção de Projetos Recentes
@@ -8,8 +9,8 @@ import Image from "next/image";
 export default function ProjectsSection() {
   const projects = [
     {
-      image:
-        "/projetos/natal-solidario-2025/cover.jpeg",
+      slug: "natal-solidario-2025",
+      image: "/projetos/natal-solidario-2025/cover.jpeg",
       title: "Natal Solidário 2025",
       description:
         "Uma tarde de acolhimento, bem-estar e alegria aos idosos, unindo cuidado com a saúde, momentos de convivência e a entrega de carinho em forma de atenção, presentes e apoio básico.",
@@ -17,9 +18,8 @@ export default function ProjectsSection() {
     },
   ];
 
-  const handleProjectClick = (projectTitle: string) => {
-    console.log(`Projeto clicado: ${projectTitle}`);
-    // TODO: Implementar navegação para página de detalhes do projeto
+  const handleProjectClick = (slug: string) => {
+    console.log(`Navegando para projeto: ${slug}`);
   };
 
   const handleViewAllProjects = () => {
@@ -44,13 +44,20 @@ export default function ProjectsSection() {
           }
         >
           {projects.map((project, index) => (
-            <div
+            <Link
               key={index}
-              className="flex flex-col group cursor-pointer max-w-md w-full bg-white rounded-xl border border-[#e8dbce] p-4"
-              onClick={() => handleProjectClick(project.title)}
+              href={`/projetos/${project.slug}`}
+              className="flex flex-col group cursor-pointer max-w-md w-full bg-white rounded-xl border border-[#e8dbce] p-4 hover:shadow-md transition-shadow"
+              onClick={() => handleProjectClick(project.slug)}
             >
-              <div className="overflow-hidden rounded-xl mb-4">
-                <Image src={project.image} alt={project.alt} width={1024} height={1024} className="w-full h-full object-cover" />
+              <div className="overflow-hidden rounded-xl mb-4 aspect-video">
+                <Image
+                  src={project.image}
+                  alt={project.alt}
+                  width={1024}
+                  height={576}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                />
               </div>
               <div className="flex flex-col gap-2">
                 <h3 className="text-text-main text-xl font-bold group-hover:text-primary transition-colors">
@@ -59,10 +66,17 @@ export default function ProjectsSection() {
                 <p className="text-text-secondary text-sm">
                   {project.description}
                 </p>
+                <div className="flex items-center gap-2 text-primary text-sm font-medium mt-2 group-hover:gap-3 transition-all">
+                  <span>Saber mais</span>
+                  <span className="material-symbols-outlined text-sm">
+                    arrow_forward
+                  </span>
+                </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
+        {/*
         <div className="flex justify-center mt-10">
           <a
             className="inline-flex items-center gap-2 text-primary font-bold hover:underline decoration-2 underline-offset-4"
@@ -78,6 +92,7 @@ export default function ProjectsSection() {
             </span>
           </a>
         </div>
+        */}
       </div>
     </section>
   );
