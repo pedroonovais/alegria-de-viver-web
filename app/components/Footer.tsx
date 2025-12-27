@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 /**
  * Componente do rodapé do site
  */
@@ -8,7 +10,7 @@ export default function Footer() {
     { label: "Sobre Nós", href: "#" },
     { label: "Nossa História", href: "#" },
     { label: "Transparência", href: "#" },
-    { label: "Diretoria", href: "#" },
+    //{ label: "Diretoria", href: "#" },
   ];
 
   const participationLinks = [
@@ -27,19 +29,18 @@ export default function Footer() {
   return (
     <footer className="bg-background-dark text-white/80 pt-16 pb-8">
       <div className="max-w-[1280px] mx-auto px-4 sm:px-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mb-12">
           {/* Brand Column */}
           <div className="flex flex-col gap-4">
             <div className="flex items-center gap-2 text-white">
-              <span className="material-symbols-outlined text-primary text-3xl">
-                volunteer_activism
-              </span>
+              <Image src="/logo_white.png" alt="Alegria de Viver" width={48} height={48} />
               <span className="text-xl font-bold">Alegria de Viver</span>
             </div>
             <p className="text-sm leading-relaxed">
-              Desde 2010 transformando a sociedade através do amor, da caridade
-              e da ação social direta. Junte-se a nós.
+              Desde 2025 construindo um futuro melhor através da sua generosidade.
+              Junte-se a nós nesta missão de amor ao próximo.
             </p>
+            {/* Social Links *
             <div className="flex gap-4 mt-2">
               {socialLinks.map((social, index) => (
                 <a
@@ -51,11 +52,11 @@ export default function Footer() {
                   <span className="material-symbols-outlined">{social.icon}</span>
                 </a>
               ))}
-            </div>
+            </div> */}
           </div>
 
           {/* Links Column - Institucional */}
-          <div className="flex flex-col gap-4">
+          <div className="flex flex-col gap-4 mx-auto">
             <h4 className="text-white font-bold text-lg">Institucional</h4>
             <ul className="flex flex-col gap-2 text-sm">
               {institutionalLinks.map((link, index) => (
@@ -71,7 +72,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Actions Column - Participe */}
+          {/* Actions Column - Participe 
           <div className="flex flex-col gap-4">
             <h4 className="text-white font-bold text-lg">Participe</h4>
             <ul className="flex flex-col gap-2 text-sm">
@@ -87,11 +88,13 @@ export default function Footer() {
               ))}
             </ul>
           </div>
+          */}
 
           {/* Contact Column */}
-          <div className="flex flex-col gap-4">
+          <div className="flex flex-col gap-4 mx-auto">
             <h4 className="text-white font-bold text-lg">Contato</h4>
             <ul className="flex flex-col gap-3 text-sm">
+              {/* Address *
               <li className="flex items-start gap-3">
                 <span className="material-symbols-outlined text-primary text-lg mt-0.5">
                   location_on
@@ -102,6 +105,7 @@ export default function Footer() {
                   Centro, São Paulo - SP
                 </span>
               </li>
+              */}
               <li className="flex items-center gap-3">
                 <span className="material-symbols-outlined text-primary text-lg">
                   call

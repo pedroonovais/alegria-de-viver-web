@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 
 /**
  * Componente de navegação principal do site
@@ -19,11 +20,7 @@ export default function Header() {
         <div className="flex items-center justify-between whitespace-nowrap">
           {/* Logo */}
           <div className="flex items-center gap-3 text-text-main">
-            <div className="text-primary size-8 flex items-center justify-center">
-              <span className="material-symbols-outlined text-3xl">
-                volunteer_activism
-              </span>
-            </div>
+            <Image src="/logo.png" alt="Alegria de Viver" width={48} height={48} />
             <h2 className="text-text-main text-lg font-bold leading-tight tracking-[-0.015em]">
               Alegria de Viver
             </h2>

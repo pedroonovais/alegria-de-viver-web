@@ -22,7 +22,7 @@ export default function HeroSection() {
             className="flex min-h-[560px] flex-col gap-6 bg-cover bg-center bg-no-repeat rounded-xl items-start justify-end px-6 pb-12 sm:px-12 sm:pb-16 shadow-lg overflow-hidden relative group"
             style={{
               backgroundImage:
-                'linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.2) 60%, rgba(0,0,0,0) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuCZsL0-6N1OHXCxtXlqgq4PaN4fqnbvsEkWls-sOGELc7nN5SDyNQ8WMKOeogDeWh-TeG_wN275NIdTGmGvBC6axIfXmDDQb-7LZ2oSgO-T04ub5CA109YF1ufnIltCDPi17-33O3WDnv0w3uo5yRssFwSIhpCs9bdU9YCLTxHpoXOWl1Fk7djEFwLNvgMurUtl_8Q_lVwGE2LddtUc8fi_Z1SCcKkg9I-ZBB2PeY_Yopsu3RMiv-il3tVyI-qZ4LjeIvT7E8LPhk4")',
+                'linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.2) 60%, rgba(0,0,0,0) 100%), url("/cover-hero-section.jpeg")',
             }}
           >
             <div

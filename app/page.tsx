@@ -2,6 +2,7 @@ import Header from "./components/Header";
 import HeroSection from "./components/HeroSection";
 import MissionSection from "./components/MissionSection";
 import ProjectsSection from "./components/ProjectsSection";
+import WhyContributeSection from "./components/WhyContributeSection";
 import CTASection from "./components/CTASection";
 import Footer from "./components/Footer";
 
@@ -15,6 +16,7 @@ export default function Home() {
       <HeroSection />
       <MissionSection />
       <ProjectsSection />
+      <WhyContributeSection />
       <CTASection />
       <Footer />
     </div>

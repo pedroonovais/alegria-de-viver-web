@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+
 /**
  * Componente da seção de Projetos Recentes
  */
@@ -7,12 +9,12 @@ export default function ProjectsSection() {
   const projects = [
     {
       image:
-        "https://lh3.googleusercontent.com/aida-public/AB6AXuCGz2DnLdJ3Oo-6Pxn2dR42eEG05IQjY7YHk-ijPigbyZYC5Qvv8H8rM9n3FH6jJTiJKKHoAkMb-Vm282hdxgvkvbhUE-oKlB3U8ttbE-J65JU3O2MKpqHKakUMR8xyZGBRNheW2qWi7cMWKeD0L7aZIppCxVUHKmLOloC8HRnmrfPTJ6JS2-jGEVD8wOe9nI6uOieO36kQKXUWWsaKxnVkGLhVSlxA0vU0jokbw64QhNVS5G4eepPEGN3JHk3dwot_a3_YoLgp__o",
-      title: "Educação para o Futuro",
+        "/projetos/natal-solidario-2025/cover.jpeg",
+      title: "Natal Solidário 2025",
       description:
-        "Apoio escolar e material didático para 50 crianças da comunidade, garantindo um futuro brilhante.",
-      alt: "Children smiling and raising hands in a classroom setting",
-    }
+        "Uma tarde de acolhimento, bem-estar e alegria aos idosos, unindo cuidado com a saúde, momentos de convivência e a entrega de carinho em forma de atenção, presentes e apoio básico.",
+      alt: "Uma tarde de acolhimento, bem-estar e alegria aos idosos, unindo cuidado com a saúde, momentos de convivência e a entrega de carinho em forma de atenção, presentes e apoio básico.",
+    },
   ];
 
   const handleProjectClick = (projectTitle: string) => {
@@ -34,19 +36,21 @@ export default function ProjectsSection() {
           </h2>
           <div className="h-1 w-20 bg-primary mt-4 rounded-full" />
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div
+          className={
+            projects.length < 3
+              ? "flex justify-center"
+              : "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
+          }
+        >
           {projects.map((project, index) => (
             <div
               key={index}
-              className="flex flex-col group cursor-pointer"
+              className="flex flex-col group cursor-pointer max-w-md w-full bg-white rounded-xl border border-[#e8dbce] p-4"
               onClick={() => handleProjectClick(project.title)}
             >
               <div className="overflow-hidden rounded-xl mb-4">
-                <div
-                  className="w-full aspect-video bg-cover bg-center transform group-hover:scale-105 transition-transform duration-500"
-                  style={{ backgroundImage: `url("${project.image}")` }}
-                  aria-label={project.alt}
-                />
+                <Image src={project.image} alt={project.alt} width={1024} height={1024} className="w-full h-full object-cover" />
               </div>
               <div className="flex flex-col gap-2">
                 <h3 className="text-text-main text-xl font-bold group-hover:text-primary transition-colors">

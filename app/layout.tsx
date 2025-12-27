@@ -9,9 +9,14 @@ const publicSans = Public_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Alegria de Viver - Página Inicial",
+  title: "Alegria de Viver",
   description:
     "Acolhemos quem precisa e construímos um futuro melhor através da sua generosidade. Junte-se a nós nesta missão de amor ao próximo.",
+  icons: {
+    icon: "/logo.png",
+    shortcut: "/logo.png",
+    apple: "/logo.png",
+  },
 };
 
 export default function RootLayout({
